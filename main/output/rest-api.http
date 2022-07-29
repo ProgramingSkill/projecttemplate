@@ -1,0 +1,35 @@
+POST http://{{host}}:{{port}}/projecttemplate/api/v1/article/add
+operateuser: {{operateuser}}
+Content-Type: application/json
+
+{
+  "tag": "{{tag}}",
+  "title": "{{title}}",
+  "content": "{{content}}"
+}
+
+###
+
+POST http://{{host}}:{{port}}/projecttemplate/api/v1/article/get
+operateuser: {{operateuser}}
+Content-Type: application/json
+
+{
+  "tag": "{{tag}}",
+  "title": "{{title}}",
+  "pagenum": {{pagenum}},
+  "pagesize": {{pagesize}}
+}
+
+###
+
+POST http://{{host}}:{{port}}/projecttemplate/api/v1/article/update
+operateuser: {{operateuser}}
+Content-Type: application/json
+
+{
+  "articleid": "{{articleid}}",
+  "tag": "{{updatetag}}",
+  "title": "{{updatetitle}}",
+  "content": "{{updatecontent}}"
+}

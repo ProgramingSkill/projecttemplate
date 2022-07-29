@@ -1,0 +1,20 @@
+# =======================
+#
+#
+[Unit]
+Description=projecttemplate service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+PIDFile=/run/projecttemplate.pid
+WorkingDirectory=/etc/projecttemplate/
+ExecStart=/etc/projecttemplate/projecttemplate -c /etc/projecttemplate/output/projecttemplate.toml
+ExecStop=/bin/kill -s QUIT $MAINPID
+Restart=always
+RestartSec=5
+Group=sudo
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

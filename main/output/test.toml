@@ -1,0 +1,29 @@
+Port = ":50870"
+
+[Log]
+Level = "DEBUG"
+
+
+[MySql]
+    [MySql.1]
+        IP = "127.0.0.1"
+        Port = "3306"
+        User = "root"
+        Password = "1qazxsw2"
+        DBName = "projecttemplate"
+
+[MongoDB]
+    [MongoDB.1]
+        IP = "$mongo@host$"
+        Port = "$mongo@port$"
+        User = "$mongo@user$"
+        Password = "$mongo@password$"
+        DBName = "$mongo@database$"
+        MongoPoolLimit = 64
+    [MongoDB.2]
+        IP = "$mongo@host$"
+        Port = "$mongo@port$"
+        User = "$mongo@user$"
+        Password = "$mongo@password$"
+        DBName = "$mongo@database$"
+        MongoPoolLimit = 64
