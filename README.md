@@ -10,7 +10,7 @@ go mod tidy
 ## 2 build
 
 ```bash
-go build
+make clean && make
 ```
 
 > + 会生成可执行文件 `projecttemplate`
@@ -18,5 +18,5 @@ go build
 ## 3 start
 
 ```bash
-./projecttemplate
+./projecttemplate -c output/projecttemplate.toml
 ```
